@@ -78,26 +78,26 @@ This project uses FreeRTOS to run multiple tasks simultaneously on the STM32 Nuc
 
 The project is organized in a modular way to keep each peripheral and task separate, making it easy to understand, modify, or extend.
 
-'''STM32_RTOS_Peripherals/
+STM32_RTOS_Peripherals/
 ├── Core/
 │   ├── Inc/
-│   │   ├── main.h                   # Main header
-│   │   ├── lcd.h                    # LCD display functions
-│   │   ├── us_delay.h               # Microsecond delay utility
-│   │   └── tasks.h                  # Task function declarations
+│   │   ├── main.h              # Main header
+│   │   ├── lcd.h               # LCD display functions
+│   │   ├── us_delay.h          # Microsecond delay utility
+│   │   └── tasks.h             # Task function declarations
 │   ├── Src/
-│   │   ├── main.c                   # Entry point (creates tasks)
-│   │   ├── lcd.c                    # LCD control code
-│   │   ├── us_delay.c              # Delay functions for ultrasonic
-│   │   ├── freertos.c              # RTOS task definitions & handles
-│   │   └── tasks/                  
+│   │   ├── main.c              # Entry point (creates tasks)
+│   │   ├── lcd.c               # LCD control code
+│   │   ├── us_delay.c          # Delay functions for ultrasonic sensor
+│   │   ├── freertos.c          # RTOS task definitions & handles
+│   │   └── tasks/
 │   │       ├── servo_task.c        # Servo motor control logic
-│   │       ├── ultrasonic_task.c   # Ultrasonic distance calculation
+│   │       ├── ultrasonic_task.c  # Ultrasonic distance calculation
 │   │       ├── motion_task.c       # Motion sensor ADC reading
 │   │       ├── lcd_task.c          # LCD display updates
 │   │       └── led_blink_task.c    # LED blinking threads
-├── Drivers/                         # HAL libraries (auto-generated)
-├── Middlewares/                    # FreeRTOS kernel files
-├── .ioc                            # STM32CubeMX config file
-├── README.md                       # Project documentation
-└── Makefile / .project             # Build system files'''
+├── Drivers/                    # HAL libraries (auto-generated)
+├── Middlewares/                # FreeRTOS kernel files
+├── .ioc                       # STM32CubeMX config file
+├── README.md                  # Project documentation
+└── Makefile / .project         # Build system files
